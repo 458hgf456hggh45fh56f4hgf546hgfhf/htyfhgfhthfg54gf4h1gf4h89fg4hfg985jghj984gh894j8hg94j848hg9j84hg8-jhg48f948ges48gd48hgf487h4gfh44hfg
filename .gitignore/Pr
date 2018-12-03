@@ -1,1 +1,1 @@
-node BotMain.js
+worker! node BotMain
