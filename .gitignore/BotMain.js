@@ -22,7 +22,7 @@ var servers = {};
 
 
 
-client.login("NTE3MzQwMTA3NzQ1OTE4OTc3.DuTVig.8gEekLuRuImrsrxeW_7kPXPMgBY");
+client.login("process.env.BOT_TOKEN");
 
 client.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find(ch => ch.name === 'welcome');
