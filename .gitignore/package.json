@@ -1,0 +1,18 @@
+{
+  "name": "oversightbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "BotMain.js",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "ffmpeg-binaries": "^4.0.0",
+    "opusscript": "0.0.6",
+    "ytdl-core": "^0.28.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CuBz",
+  "license": "ISC"
+}
