@@ -24,7 +24,7 @@ var servers = {};
 
 
 
-client.login("process.env.BOT_TOKEN");
+client.login(token);
 
 client.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find(ch => ch.name === 'welcome');
