@@ -70,7 +70,7 @@ client.on("ready", () => {
 
     console.log("Je suis prêt !");
 
-    client.user.setGame(`o*help`);
+    client.user.setGame(`o*help | V.1.3`);
 
 
 
