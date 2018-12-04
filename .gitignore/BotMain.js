@@ -72,7 +72,7 @@ client.on("ready", () => {
 
     console.log("Je suis prêt !");
 
-    client.user.setGame(`o*help | V.1.3`);
+    client.user.setGame(`o*help | V.1.4`);
 
 
 
@@ -129,6 +129,8 @@ client.on('message', async message => {
       .setTitle(`:tools: Here are my commands moderations !`)
 
       .setThumbnail(message.author.avatarURL)
+      
+      .addField("o*announcement <message>", "The bot writes your requested message")
 
       .addField("o*kick <@user>", "Kick the user !")
 
@@ -1138,11 +1140,11 @@ if (message.content.startsWith(prefix + "8ball")) {
 
 }
     
-  if(message.content.startsWith(prefix + "say")){
+  if(message.content.startsWith(prefix + "announcement")){
         if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("You do not have SAY's permissions! :warning:");
         var args = message.content.split(' ').join('  ').slice(6);
         if(!args) return message.reply("You did not make a sentence or a word!")
-        var say_embed = new Discord.RichEmbed()
+        var announcement_embed = new Discord.RichEmbed()
 
         .setColor('RANDOM')
       
@@ -1150,7 +1152,7 @@ if (message.content.startsWith(prefix + "8ball")) {
         
         
         message.channel.send("@everyone")
-        message.channel.send(say_embed);
+        message.channel.send(announcement_embed);
     }
 
 
