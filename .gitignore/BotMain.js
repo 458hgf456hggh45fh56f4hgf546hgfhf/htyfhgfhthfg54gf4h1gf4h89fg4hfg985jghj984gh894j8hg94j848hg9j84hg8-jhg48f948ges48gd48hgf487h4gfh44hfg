@@ -1137,6 +1137,21 @@ if (message.content.startsWith(prefix + "8ball")) {
   message.channel.send(ball_embed);
 
 }
+    
+  if(message.content.startsWith(prefix + "say")){
+        if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("You do not have SAY's permissions! :warning:");
+        var args = message.content.split(' ').join('  ').slice(6);
+        if(!args) return message.reply("You did not make a sentence or a word!")
+        var say_embed = new Discord.RichEmbed()
+
+        .setColor('RANDOM')
+      
+        .setTitle(`${args}`)
+        
+        
+        message.channel.send("@everyone")
+        message.channel.send(say_embed);
+    }
 
 
 
