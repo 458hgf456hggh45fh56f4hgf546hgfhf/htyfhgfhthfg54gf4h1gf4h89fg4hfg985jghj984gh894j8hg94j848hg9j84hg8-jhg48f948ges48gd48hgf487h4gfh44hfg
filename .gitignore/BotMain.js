@@ -72,7 +72,7 @@ client.on("ready", () => {
 
     console.log("Je suis prêt !");
 
-    client.user.setGame(`o*help | V.1.4`);
+    client.user.setGame(`o*help | V.1.5 In progress`);
 
 
 
