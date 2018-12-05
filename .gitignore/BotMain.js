@@ -418,7 +418,7 @@ client.on('message', async message => {
 
     
 
-        if(message.guild.member(client.user).hasPermission("KICK_MEMBERS")) {
+        if(!message.guild.member(client.user).hasPermission("KICK_MEMBERS")) {
 
             return message.channel.send("I do not have permission to kick");
 
