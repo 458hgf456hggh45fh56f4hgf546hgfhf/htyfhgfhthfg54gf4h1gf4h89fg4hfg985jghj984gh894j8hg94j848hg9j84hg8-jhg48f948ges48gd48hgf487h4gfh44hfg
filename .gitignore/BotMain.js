@@ -29,7 +29,7 @@ client.login(token);
 client.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find(ch => ch.name === 'welcome');
   if (!channel) return;
-  channel.send(`Welcome to the server, ${member} :tada:`
+  channel.send(`Welcome to the server, ${member} ! :tada: :)`
 });
 
 
