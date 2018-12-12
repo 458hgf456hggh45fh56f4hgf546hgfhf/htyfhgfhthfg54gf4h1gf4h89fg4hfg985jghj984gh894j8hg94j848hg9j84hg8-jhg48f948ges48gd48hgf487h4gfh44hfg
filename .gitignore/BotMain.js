@@ -39,7 +39,7 @@ client.on('guildMemberAdd', member => {
 
       .setTimestamp()
 
-      message.channel.send(welcome_embed);
+      channel.send(welcome_embed);
 
     }
 });
