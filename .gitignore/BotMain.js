@@ -29,7 +29,21 @@ client.login(token);
 client.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find(ch => ch.name === 'welcome');
   if (!channel) return;
-  channel.send(`Welcome to the server, ${member} ! :tada: :)`);
+        var mod_embed = new Discord.RichEmbed()
+
+      .setColor('RANDOM')
+
+      .setTitle(`New member ! :tada:`)
+
+      .setThumbnail(message.author.avatarURL)
+      
+      .addField("Name :", `${username}`)
+
+      .setTimestamp()
+
+      message.channel.send(mod_embed);
+
+    }
 });
 
 
