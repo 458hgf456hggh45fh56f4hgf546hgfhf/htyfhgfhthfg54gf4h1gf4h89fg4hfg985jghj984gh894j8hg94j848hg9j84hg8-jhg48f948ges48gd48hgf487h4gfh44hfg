@@ -109,6 +109,8 @@ client.on('message', async message => {
       .addField(":tools: Moderation", "Do `o*mod` to see my moderation commands !")
 
       .addField(":tada: Normal", "Do `o*nrml` to see my animation command !")
+      
+      .setURL("https://www.youtube.com/channel/UC7MN-cByC8J1ZQ9vopnfWpw", "YouTube channel of the creator")
 
       .setFooter("Help Panel")
 
