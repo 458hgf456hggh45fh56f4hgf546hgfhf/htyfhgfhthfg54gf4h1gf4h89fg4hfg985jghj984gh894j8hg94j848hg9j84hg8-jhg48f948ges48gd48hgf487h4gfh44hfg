@@ -106,9 +106,9 @@ client.on('message', async message => {
 
       .setThumbnail(message.author.avatarURL)
 
-      .addField(":tools: Moderation", "Do `o*mod` to see my moderation commands !")
+      .addField(":tools: Moderation", "Do `?mod` to see my moderation commands !")
 
-      .addField(":tada: Normal", "Do `o*nrml` to see my animation command !")
+      .addField(":tada: Normal", "Do `?nrml` to see my animation command !")
 
       .setFooter("Help Panel")
 
@@ -130,23 +130,23 @@ client.on('message', async message => {
 
       .setThumbnail(message.author.avatarURL)
       
-      .addField("o*say <message>", "The bot writes your requested message")
+      .addField("?say <message>", "The bot writes your requested message")
 
-      .addField("o*kick <@user>", "Kick the user !")
+      .addField("?kick <@user>", "Kick the user !")
 
-      .addField("o*ban <@user>", "Ban the user !")
+      .addField("?ban <@user>", "Ban the user !")
 
-      .addField("o*clear <nombre>", "Deletes the specified number of messages")
+      .addField("?clear <nombre>", "Deletes the specified number of messages")
 
-      .addField("o*mute <@user>", "Mute the mentioned user")
+      .addField("?mute <@user>", "Mute the mentioned user")
 
-      .addField("o*unmute <@user>", "Unmute the mentioned user")
+      .addField("?unmute <@user>", "Unmute the mentioned user")
 
-      .addField("o*warn <@user> <raison>", "Warn the mentioned user")
+      .addField("?warn <@user> <raison>", "Warn the mentioned user")
       
-      .addField("o*seewarns <@user> <raison>", "Warn the mentioned user")
+      .addField("?seewarns <@user> <raison>", "Warn the mentioned user")
 
-      .addField("o*deletewarns <user> <number>", "Delete Warns")
+      .addField("?deletewarns <user> <number>", "Delete Warns")
 
       .setFooter("Moderation commands")
 
@@ -168,17 +168,17 @@ client.on('message', async message => {
 
       .setThumbnail(message.author.avatarURL)
 
-      .addField("o*stats", "The bot sends you information about your profile !")
+      .addField("?stats", "The bot sends you information about your profile !")
 
-      .addField("o*news", "Give hints about the bot and the server !")
+      .addField("?news", "Give hints about the bot and the server !")
 
-      .addField("o*8ball <Question>", "Random answer !")
+      .addField("?8ball <Question>", "Random answer !")
 
-      .addField("o*play <Youtube link>", "Music or video youtube !")
+      .addField("?play <Youtube link>", "Music or video youtube !")
 
-      .addField("o*stop", "Stop the music !")
+      .addField("?stop", "Stop the music !")
 
-      .addField("o*skip", "Pass the music !")
+      .addField("?skip", "Pass the music !")
 
       .setFooter("Normal commands")
 
