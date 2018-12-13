@@ -8,7 +8,7 @@ const client = new Discord.Client();
 const token = process.env.token;
 
 
-var prefix = "o*";
+var prefix = "?";
 
 
 
@@ -72,7 +72,7 @@ client.on("ready", () => {
 
     console.log("Je suis prêt !");
 
-    client.user.setGame(`o*help | Version 1.4`);
+    client.user.setGame(`?help | Version 1.5`);
 
 
 
