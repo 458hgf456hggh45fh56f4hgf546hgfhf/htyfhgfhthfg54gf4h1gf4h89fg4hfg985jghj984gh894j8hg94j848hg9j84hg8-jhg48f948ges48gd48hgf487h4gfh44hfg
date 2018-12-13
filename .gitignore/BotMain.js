@@ -110,7 +110,7 @@ client.on('message', async message => {
 
       .addField(":tada: Normal", "Do `o*nrml` to see my animation command !")
       
-      .setURL("https://www.youtube.com/channel/UC7MN-cByC8J1ZQ9vopnfWpw", "YouTube channel of the creator")
+      .setURL("https://www.youtube.com/channel/UC7MN-cByC8J1ZQ9vopnfWpw")
 
       .setFooter("Help Panel")
 
