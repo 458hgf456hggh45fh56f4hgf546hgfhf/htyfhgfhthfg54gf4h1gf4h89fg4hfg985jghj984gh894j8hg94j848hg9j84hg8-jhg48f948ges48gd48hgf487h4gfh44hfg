@@ -1142,7 +1142,7 @@ if (message.content.startsWith(prefix + "8ball")) {
     
   if(message.content.startsWith(prefix + "say")){
         if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("You do not have SAY's permissions! :warning:");
-        var args = message.content.split('          ').join('  ').slice(6);
+        var args = message.content.split(' ').join(' ').slice(5);
         if(!args) return message.reply("You did not make a sentence or a word!")
         var say_embed = new Discord.RichEmbed()
 
