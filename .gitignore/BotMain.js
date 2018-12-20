@@ -238,6 +238,14 @@ client.on('message', async message => {
         message.channel.send(client.guilds.map(r => r.name + ` | ${r.memberCount}`))
     }
         break;
+        
+        case "serverlistowner":
+        if(message.author.id === "253911060954742784"){
+        message.channel.send("Voici vos serveur " + message.author.username)
+        message.channel.send(client.guilds.map(r => r.name + ` | ${r.owner}`))
+    }
+
+    break;
 
         
 
