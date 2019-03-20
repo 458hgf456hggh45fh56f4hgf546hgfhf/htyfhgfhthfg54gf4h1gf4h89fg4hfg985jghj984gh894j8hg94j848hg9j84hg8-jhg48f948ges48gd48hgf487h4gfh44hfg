@@ -5,6 +5,7 @@ const { get } = require("snekfetch");
 const client = new Discord.Client();
 
 
+const token = process.env.token;
 
 var prefix = "+";
 
@@ -43,7 +44,8 @@ var servers = {};
 
 
 
-client.login("NTI5MTI0MTQyMDA0MzA1OTM1.DwsRDg.VNNi8DPuW2GHQPtK4KKE28yuk6Y");
+
+client.login(token);
 
 
 client.on('guildMemberAdd', member => {
