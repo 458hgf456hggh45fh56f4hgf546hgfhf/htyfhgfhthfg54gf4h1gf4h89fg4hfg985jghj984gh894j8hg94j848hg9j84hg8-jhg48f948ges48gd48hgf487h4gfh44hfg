@@ -57,8 +57,6 @@ client.on('guildMemberAdd', member => {
   var bvn_embed = new Discord.RichEmbed()
 
 
-  .setThumbnail("https://cdn.discordapp.com/attachments/336895427112861697/529125760594739200/GalaxieBOT.png")
-
   .addField("Bienvenue sur le serveur " + channel.guild.name, `${member}`)
 
   .addField("Actuellement nous sommes :", + channel.guild.members.size)
@@ -90,8 +88,6 @@ client.on('message', async message => {
 
       .setDescription("Nombre de commandes : **"+commands+"** \n Prefix : "+prefix+" \n \n Liste des commandes :  ")
 
-      .setThumbnail("https://cdn.discordapp.com/attachments/336895427112861697/529125760594739200/GalaxieBOT.png")
-
       .addField(":arrow_right: BotStaff ("+botstaff+")", "`Aucune commande`")
 
       .addField(":arrow_right: Modération ("+modération+")", "`"+prefix+"kick`, `"+prefix+"ban`, `"+prefix+"clear`, `"+prefix+"say`, `"+prefix+"poll`, `"+prefix+"mute`, `"+prefix+"unmute`, `"+prefix+"warn`, `"+prefix+"deletewarns`")
@@ -113,8 +109,6 @@ client.on('message', async message => {
 
 
         .setTitle("Info : \n \n ")
-
-        .setThumbnail('https://cdn.discordapp.com/attachments/336895427112861697/529125760594739200/GalaxieBOT.png')
 
         .addField(":arrow_right: Nom du discord :", message.guild.name)
 
