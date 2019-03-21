@@ -245,7 +245,7 @@ client.on('message', async message => {
          var clear_embed = new Discord.RichEmbed()
 
 
-        .setTitle("Clear:white_check_mark")
+        .setTitle("Clear:white_check_mark:")
 
         .addField(":arrow_right: Message suprimmer :", args[0])
 
