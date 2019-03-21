@@ -932,8 +932,8 @@ if(message.content.startsWith(prefix + "poll")){
 
     .addField(thingToEcho, "Répondre avec :white_check_mark: ou :x:")
 
-    message.channel.send("**Votre sondage à bien été lancé dans 📊-sondages**")
-    message.guild.channels.find("name", "📊-sondages").sendEmbed(embed)
+    message.channel.send("**Votre sondage à bien été lancé dans sondages**")
+    message.guild.channels.find("name", "sondages").sendEmbed(embed)
     .then(function (message) {
       message.react("✅")
       message.react("❌")
@@ -973,8 +973,8 @@ switch (args[0].toLowerCase()) {
     .addField("Salon", message.channel)
     .addField("Date", message.createdAt)
     .addField("Raison", rreason);
-    let reportschannel = message.guild.channels.find(`name`, "📝-report");
-    if(!reportschannel) return message.channel.send("**Le salon '📝-report' n'existe pas !**");
+    let reportschannel = message.guild.channels.find(`name`, "report");
+    if(!reportschannel) return message.channel.send("**Le salon 'report' n'existe pas !**");
     message.delete().catch(O_o=>{});
     reportschannel.send(reportEmbed);
     message.reply("**Le report à bien été envoyé au staff !** :white_check_mark:")
