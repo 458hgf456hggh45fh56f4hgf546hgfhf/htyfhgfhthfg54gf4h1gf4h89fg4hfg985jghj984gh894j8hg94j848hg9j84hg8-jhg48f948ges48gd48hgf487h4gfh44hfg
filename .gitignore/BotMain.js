@@ -158,7 +158,16 @@ client.on('message', async message => {
 
         kick.kick().then(member => {
 
-            message.channel.send(`${member.user.username} est kick par ${message.author.username}`);
+         var kick_embed = new Discord.RichEmbed()
+
+
+        .setDescription("Exclusion :exclamation:")
+
+        .addField(":arrow_right: Joueur exclu :", member.user.username)
+
+        .addField(":arrow_right: Personnel l'ayant exécutée :", message.author.username)
+
+        message.channel.sendMessage(kick_embed)
 
         });
 
