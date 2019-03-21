@@ -161,7 +161,7 @@ client.on('message', async message => {
          var kick_embed = new Discord.RichEmbed()
 
 
-        .setDescription("Exclusion :exclamation:")
+        .setTitle("Exclusion :exclamation:")
 
         .addField(":arrow_right: Joueur exclu :", member.user.username)
 
