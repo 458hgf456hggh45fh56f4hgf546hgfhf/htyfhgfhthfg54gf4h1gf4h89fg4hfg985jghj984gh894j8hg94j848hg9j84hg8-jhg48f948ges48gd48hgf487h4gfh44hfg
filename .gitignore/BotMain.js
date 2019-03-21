@@ -72,7 +72,7 @@ client.on('guildMemberAdd', member => {
 client.on("ready", () => {
 
 
-    client.user.setGame(""+prefix+"help | Version 2.1");
+    client.user.setGame(""+prefix+"help | Version 2.1.1");
     
 
 
@@ -251,7 +251,7 @@ client.on('message', async message => {
 
         .addField(":arrow_right: Personnel l'ayant exécutée :", message.author.username)
 
-        message.channel.sendMessage(kick_embed)
+        message.channel.sendMessage(clear_embed)
 
         });
 
