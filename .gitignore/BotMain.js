@@ -72,7 +72,7 @@ client.on('guildMemberAdd', member => {
 client.on("ready", () => {
 
 
-    client.user.setGame(""+prefix+"help | Version 2.1.2");
+    client.user.setGame(""+prefix+"help | Version 2.1.2 | "+serveurs+"");
     
 
 
