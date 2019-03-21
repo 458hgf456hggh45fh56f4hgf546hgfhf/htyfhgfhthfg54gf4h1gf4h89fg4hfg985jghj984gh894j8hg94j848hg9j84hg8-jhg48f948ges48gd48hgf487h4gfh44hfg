@@ -161,7 +161,7 @@ client.on('message', async message => {
          var kick_embed = new Discord.RichEmbed()
 
 
-        .setTitle("Exclusion :exclamation:")
+        .setTitle("Exclusion:exclamation:")
 
         .addField(":arrow_right: Joueur exclu :", member.user.username)
 
@@ -210,7 +210,7 @@ client.on('message', async message => {
          var ban_embed = new Discord.RichEmbed()
 
 
-        .setTitle("Bannissement :exclamation:")
+        .setTitle("Bannissement:exclamation:")
 
         .addField(":arrow_right: Joueur banni :", member.user.username)
 
@@ -242,7 +242,16 @@ client.on('message', async message => {
 
         message.channel.bulkDelete(args[0]).then(() => {
 
-            message.channel.send(`${args[0]} messages ont été supprimés !`);
+         var clear_embed = new Discord.RichEmbed()
+
+
+        .setTitle("Clear:white_check_mark")
+
+        .addField(":arrow_right: Message suprimmer :", args[0])
+
+        .addField(":arrow_right: Personnel l'ayant exécutée :", message.author.username)
+
+        message.channel.sendMessage(kick_embed)
 
         });
 
@@ -281,7 +290,7 @@ client.on('message', async message => {
          var mute_embed = new Discord.RichEmbed()
 
 
-        .setTitle("Mute :exclamation:")
+        .setTitle("Mute:exclamation:")
 
         .addField(":arrow_right: Joueur mute :", member.user.username)
 
