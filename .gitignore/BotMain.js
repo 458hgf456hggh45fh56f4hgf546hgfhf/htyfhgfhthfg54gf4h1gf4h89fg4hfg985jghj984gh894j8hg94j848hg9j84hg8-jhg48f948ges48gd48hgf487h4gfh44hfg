@@ -72,7 +72,7 @@ client.on('guildMemberAdd', member => {
 client.on("ready", () => {
 
 
-    client.user.setGame(""+prefix+"help | Version 2.0");
+    client.user.setGame(""+prefix+"help | Version 2.1");
     
 
 
@@ -207,7 +207,16 @@ client.on('message', async message => {
 
         ban.ban().then(member => {
 
-            message.channel.send(`${member.user.username} est ban par ${message.author.username} !`)
+         var ban_embed = new Discord.RichEmbed()
+
+
+        .setTitle("Bannissement :exclamation:")
+
+        .addField(":arrow_right: Joueur banni :", member.user.username)
+
+        .addField(":arrow_right: Personnel l'ayant exécutée :", message.author.username)
+
+        message.channel.sendMessage(ban_embed)
 
         });
 
@@ -269,7 +278,16 @@ client.on('message', async message => {
 
         message.channel.overwritePermissions(mute, { SEND_MESSAGES: false}).then(member => {
 
-            message.channel.send(`${mute.user.username} est mute !`);
+         var mute_embed = new Discord.RichEmbed()
+
+
+        .setTitle("Mute :exclamation:")
+
+        .addField(":arrow_right: Joueur mute :", member.user.username)
+
+        .addField(":arrow_right: Personnel l'ayant exécutée :", message.author.username)
+
+        message.channel.sendMessage(mute_embed)
 
         });
 
