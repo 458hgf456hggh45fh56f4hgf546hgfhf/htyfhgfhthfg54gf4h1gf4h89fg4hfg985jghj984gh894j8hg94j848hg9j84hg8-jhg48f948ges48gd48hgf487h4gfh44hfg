@@ -72,7 +72,7 @@ client.on('guildMemberAdd', member => {
 client.on("ready", () => {
 
 
-    client.user.setGame(""+prefix+"help | "#SaveCuBz" !"");
+    client.user.setGame(""+prefix+"help | SaveCuBz !"");
     
 
 
