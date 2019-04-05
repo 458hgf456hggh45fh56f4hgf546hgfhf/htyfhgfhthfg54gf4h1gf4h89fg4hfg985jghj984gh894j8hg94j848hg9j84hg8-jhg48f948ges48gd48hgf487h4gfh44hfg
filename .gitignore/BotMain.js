@@ -86,12 +86,19 @@ client.on('message', async message => {
 
       var aide_embed = new Discord.RichEmbed()
       
-      .setTitle('ALERTE ROUGE ! :')
+      .setDescription("Nombre de commandes : **"+commands+"** \n Prefix : "+prefix+" \n \n Liste des commandes :  ")
 
-      .setDescription("CuBz (LE CREATEUR DE OVERSIGHT) A BESOIN DE VOUS ! CuBz SUR YOUTUBE VAS SE FAIRE DOUBLER PAR AYPIXEL VEUILLEZ VOUS ABONNER EN MASSE A CUBZ POUR QUE IL RESTE A SA PLACE ! AYPIXEL SALOPE !")
+      .addField(":arrow_right: BotStaff ("+botstaff+")", "`Aucune commande`")
+
+      .addField(":arrow_right: Modération ("+modération+")", "`"+prefix+"kick`, `"+prefix+"ban`, `"+prefix+"clear`, `"+prefix+"say`, `"+prefix+"poll`, `"+prefix+"mute`, `"+prefix+"unmute`, `"+prefix+"warn`, `"+prefix+"deletewarns`")
+
+      .addField(":arrow_right: Générale ("+générale+")", "`"+prefix+"info`, `"+prefix+"8ball`, `"+prefix+"stats`, `"+prefix+"report`")
+
+      .addField(":arrow_right: Image ("+image+")", "`"+prefix+"cat`")
+
+      .setFooter("By CuBz#7372")
 
       message.channel.send(aide_embed);
-	message.channel.send('https://cdn.discordapp.com/attachments/337175141588926467/559012941773406218/Capture.PNG')
 
     }
 
