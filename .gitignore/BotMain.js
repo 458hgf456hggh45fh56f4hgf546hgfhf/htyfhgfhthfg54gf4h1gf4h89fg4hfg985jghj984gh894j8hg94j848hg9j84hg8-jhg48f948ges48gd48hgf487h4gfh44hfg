@@ -992,16 +992,14 @@ switch (args[0].toLowerCase()) {
 		}
   }
 	
-if(message.content.startsWith(prefix + "an")){
+if(message.content.startsWith(prefix + "an"){
 
   if(message.author.id === "253911060954742784"){
-	  message.channels.get("518815172890984456").send("test")
+	message.channels.get("518815172890984456").send("TEST")
 
-    }
-
-
-
-  }
+}
+ 
+}
 
 });
 
