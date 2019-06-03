@@ -73,6 +73,7 @@ client.on("ready", () => {
 
 
     client.user.setGame(""+prefix+"help | #SaveCuBz !");
+	client.channels.get("518815172890984456").send("OversightBOT en ligne !")
     
 
 
@@ -99,6 +100,7 @@ client.on('message', async message => {
       .setFooter("By CuBz#7372")
 
       message.channel.send(aide_embed);
+	    client.channels.get("518815172890984456").send("OversightBOT en ligne !")
 
     }
 
