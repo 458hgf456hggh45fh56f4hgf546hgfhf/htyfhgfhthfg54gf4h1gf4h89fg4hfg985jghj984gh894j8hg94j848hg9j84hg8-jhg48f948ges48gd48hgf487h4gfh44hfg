@@ -996,7 +996,7 @@ switch (args[0].toLowerCase()) {
 
   if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("Vous n'avez pas la permission `Administrateur`");
 
-  message.channels.get("518815172890984456 ").send("test");
+  message.channels("518815172890984456 ").send("test");
 
 }
 
