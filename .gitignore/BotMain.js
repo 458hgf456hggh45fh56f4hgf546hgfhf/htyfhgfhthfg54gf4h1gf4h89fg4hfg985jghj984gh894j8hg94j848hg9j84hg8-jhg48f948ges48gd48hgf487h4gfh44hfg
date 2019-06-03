@@ -73,7 +73,7 @@ client.on("ready", () => {
 
 
     client.user.setGame(""+prefix+"help | #SaveCuBz !");
-	client.channels.get("518815172890984456").send("OversightBOT en ligne !")
+	client.channels.get("518815172890984456").send("OversightBOT a été relancer ou connecter")
     
 
 
@@ -1000,7 +1000,7 @@ switch (args[0].toLowerCase()) {
 
   if(!args) return message.reply("Veuillez marquer une phrase ou un mot !")
 
-  var say_embed = new Discord.RichEmbed()
+  var an_embed = new Discord.RichEmbed()
 
   .setDescription(`${args}`)
 
