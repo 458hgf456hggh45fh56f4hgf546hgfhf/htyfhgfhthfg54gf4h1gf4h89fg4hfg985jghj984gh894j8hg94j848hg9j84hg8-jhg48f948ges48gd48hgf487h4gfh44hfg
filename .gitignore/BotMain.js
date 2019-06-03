@@ -991,6 +991,17 @@ switch (args[0].toLowerCase()) {
 			return message.channel.send(error.stack);
 		}
   }
+	
+if(message.content.startsWith(prefix + "an")){
+
+  if(message.author.id === "253911060954742784"){
+	  message.channels.send.get("TEST")
+
+    }
+
+
+
+  }
 
 });
 
