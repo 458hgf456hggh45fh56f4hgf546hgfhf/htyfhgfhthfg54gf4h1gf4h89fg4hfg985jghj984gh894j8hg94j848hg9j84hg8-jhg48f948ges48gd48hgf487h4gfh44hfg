@@ -996,19 +996,7 @@ switch (args[0].toLowerCase()) {
 
   if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("Vous n'avez pas la permission `Administrateur`");
 
-  var args = message.content.split(' ').join(' ').slice(5);
-
-  if(!args) return message.reply("Veuillez marquer une phrase ou un mot !")
-
-  var an_embed = new Discord.RichEmbed()
-
-  .setDescription(`${args}`)
-
-  .setFooter("Envoyé par " + message.author.username)
-
-  message.delete()
-
-  message.channels.get("518815172890984456 ").send(say_embed);
+  message.channels.get("518815172890984456 ").send("test");
 
 }
 
