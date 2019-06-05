@@ -960,6 +960,23 @@ switch (args[0].toLowerCase()) {
     .setThumbnail(message.author.avatarURL)
     message.reply("**Regarde dans tes messages privés ! Il y a t'es statistiques !**")
     message.author.send(stats_embed);
+    break;
+    case "global":
+    let ovargs = message.content.split(" ").slice(1);
+    let ov03 = ovargs.join(" ")
+    var ov02 = message.guild.channels.find('name', 'oversight-global');
+    if(!ov02) return message.reply("**Le channel oversight-global est introuvable**")
+    if(message.channel.name !== 'oversight-global') return message.reply("**Commandes à effectuer dans oversight-global**")
+    if(!ov03) return message.reply("**Merci d'écrire un message à envoyer à la globalité des discords**")
+    var embedglobal = new Discord.RichEmbed()
+    .setColor("#51ff00")
+    .setTitle("Message global Oversight")
+    .addField("Pseudo de l'utilisateur", message.author.username + "#" +message.author.discriminator)
+    .addField("Discord", message.guild.name, true)
+    .addField("Message", ov03)
+    .setFooter("Oversight Corporation")
+    .setTimestamp()
+    client.channels.findAll('name', 'oversight-global').map(channel => channel.send(embedglobal))
   }
 
   if(message.content.startsWith(prefix + "report")){ 
