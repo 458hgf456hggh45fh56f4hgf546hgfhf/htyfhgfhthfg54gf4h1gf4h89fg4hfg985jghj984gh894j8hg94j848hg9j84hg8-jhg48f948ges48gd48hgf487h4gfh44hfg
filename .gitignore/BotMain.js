@@ -19,7 +19,7 @@ var modération = "10"; //7
 var générale = "4"; //3
 
 
-var botstaff = "0";
+var botstaff = "1";
 
 
 var image = "1";
@@ -88,7 +88,7 @@ client.on('message', async message => {
       
       .setDescription("Nombre de commandes : **"+commands+"** \n Prefix : "+prefix+" \n \n Liste des commandes :  ")
 
-      .addField(":arrow_right: BotStaff ("+botstaff+")", "`Aucune commande`")
+      .addField(":arrow_right: BotStaff ("+botstaff+")", "`"+prefix+"serverlist`)
 
       .addField(":arrow_right: Modération ("+modération+")", "`"+prefix+"kick`, `"+prefix+"ban`, `"+prefix+"clear`, `"+prefix+"say`, `"+prefix+"poll`, `"+prefix+"mute`, `"+prefix+"unmute`, `"+prefix+"warn`, `"+prefix+"deletewarns`")
 
