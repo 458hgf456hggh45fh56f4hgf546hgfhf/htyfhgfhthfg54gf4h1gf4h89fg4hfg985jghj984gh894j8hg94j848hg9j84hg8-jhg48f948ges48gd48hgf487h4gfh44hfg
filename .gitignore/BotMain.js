@@ -992,13 +992,16 @@ switch (args[0].toLowerCase()) {
 		}
   }
 	
-  if(message.content.startsWith(prefix + "an")){
+    if (!message.content.startsWith(prefix)) return;
+    var args = message.content.substring(prefix.length).split(" ");
+    switch (args[0].toLowerCase()) { 
+        case "serverlist":
+	message.channel.send(bot.guilds.map(r = r.name + ` | **${r.memberCount}** membres`))
+		    
+        break;
 
-  if(!message.guild.member(message.author).hasPermission("ADMINISTRATOR")) return message.reply("Vous n'avez pas la permission `Administrateur`");
 
-  message.channels("518815172890984456 ").send("test");
-
-}
+    }
 
 });
 
