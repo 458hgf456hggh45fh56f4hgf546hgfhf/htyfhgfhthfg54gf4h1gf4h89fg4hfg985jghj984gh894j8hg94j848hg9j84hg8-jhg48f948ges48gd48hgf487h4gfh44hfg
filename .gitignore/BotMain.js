@@ -1001,6 +1001,8 @@ switch (args[0].toLowerCase()) {
 
 }
 
+}else{
+      return message.reply("Cette commande est actuellement en test ! Merci de patienter !")
 }
 	
 });
