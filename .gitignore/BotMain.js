@@ -960,11 +960,6 @@ switch (args[0].toLowerCase()) {
     .setThumbnail(message.author.avatarURL)
     message.reply("**Regarde dans tes messages privés ! Il y a t'es statistiques !**")
     message.author.send(stats_embed);
-    break;
-    case "serverlist":
-    message.channel.send(client.guilds.map(r => r.name + ` | **${r.memberCount}** membres`))
-		    
-    break;
   }
 
   if(message.content.startsWith(prefix + "report")){ 
@@ -995,6 +990,16 @@ switch (args[0].toLowerCase()) {
 			return message.channel.send(error.stack);
 		}
   }
+if (!message.content.startsWith(prefix)) return;
+if(message.author.id === "253911060954742784");
+var args = message.content.substring(prefix.length).split(" ");
+switch (args[0].toLowerCase()) { 
+    case "serverlist":
+    message.channel.send(client.guilds.map(r => r.name + ` | **${r.memberCount}** membres`))
+		    
+    break;
+
+}
 	
 });
 
