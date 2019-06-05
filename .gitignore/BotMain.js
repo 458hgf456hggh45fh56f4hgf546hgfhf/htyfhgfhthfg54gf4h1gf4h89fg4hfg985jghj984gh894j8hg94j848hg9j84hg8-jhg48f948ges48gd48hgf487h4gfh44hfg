@@ -991,7 +991,7 @@ switch (args[0].toLowerCase()) {
 		}
   }
   if (!message.content.startsWith(prefix)) return;
-  if(message.author.id === "253911060954742784"){
+  if(message.author.id === "253911060954742784" + "337139154020466688"){
 var args = message.content.substring(prefix.length).split(" ");
 switch (args[0].toLowerCase()) { 
     case "serverlist":
