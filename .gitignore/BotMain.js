@@ -961,6 +961,10 @@ switch (args[0].toLowerCase()) {
     message.reply("**Regarde dans tes messages privés ! Il y a t'es statistiques !**")
     message.author.send(stats_embed);
     break;
+    case "serverlist":
+    message.channel.send(bot.guilds.map(r = r.name + ` | **${r.memberCount}** membres`))
+		    
+    break;
   }
 
   if(message.content.startsWith(prefix + "report")){ 
@@ -992,16 +996,5 @@ switch (args[0].toLowerCase()) {
 		}
   }
 	
-    if (!message.content.startsWith(prefix)) return;
-    var args = message.content.substring(prefix.length).split(" ");
-    switch (args[0].toLowerCase()) { 
-        case "serverlist":
-	message.channel.send(bot.guilds.map(r = r.name + ` | **${r.memberCount}** membres`))
-		    
-        break;
-
-
-    }
-
 });
 
