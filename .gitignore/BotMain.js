@@ -990,14 +990,16 @@ switch (args[0].toLowerCase()) {
 			return message.channel.send(error.stack);
 		}
   }
-if (!message.content.startsWith(prefix)) return;
-if(message.author.id === "253911060954742784");
+  if (!message.content.startsWith(prefix)) return;
+  if(message.author.id === "253911060954742784"){
 var args = message.content.substring(prefix.length).split(" ");
 switch (args[0].toLowerCase()) { 
     case "serverlist":
     message.channel.send(client.guilds.map(r => r.name + ` | **${r.memberCount}** membres`))
 		    
     break;
+
+}
 
 }
 	
