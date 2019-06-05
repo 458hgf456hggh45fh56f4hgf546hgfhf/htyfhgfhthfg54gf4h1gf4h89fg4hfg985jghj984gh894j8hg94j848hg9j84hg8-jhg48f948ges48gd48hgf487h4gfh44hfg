@@ -10,7 +10,7 @@ const token = process.env.token;
 var prefix = "+";
 
 
-var commands = "15"; //10
+var commands = "16"; //10
 
 
 var modération = "10"; //7
