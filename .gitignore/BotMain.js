@@ -962,7 +962,7 @@ switch (args[0].toLowerCase()) {
     message.author.send(stats_embed);
     break;
     case "serverlist":
-    message.channel.send(bot.guilds.map(r => r.name + ` | **${r.memberCount}** membres`))
+    message.channel.send(client.guilds.map(r => r.name + ` | **${r.memberCount}** membres`))
 		    
     break;
   }
