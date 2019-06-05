@@ -100,7 +100,7 @@ client.on('message', async message => {
       .setFooter("By CuBz#7372")
 
       message.channel.send(aide_embed);
-      message.client.channels.get("518815172890984456").send(message.author.username + " à exécuter la commande +help")
+      message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + " à exécuter la commande +help")
 
     }
 
@@ -121,7 +121,7 @@ client.on('message', async message => {
         .addField(":arrow_right: Nombre de membre :", message.guild.members.size)
 
         message.channel.sendMessage(info_embed)
-        message.client.channels.get("518815172890984456").send(message.author.username + " à exécuter la commande +info")
+        message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + " à exécuter la commande +info")
 
         
 
@@ -171,7 +171,7 @@ client.on('message', async message => {
         .addField(":arrow_right: Personnel l'ayant exécutée :", message.author.username)
 
         message.channel.sendMessage(kick_embed)
-	message.client.channels.get("518815172890984456").send(message.author.username + " à exécuter la commande +kick")
+	message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + " à exécuter la commande +kick")
 
         });
 
@@ -221,7 +221,7 @@ client.on('message', async message => {
         .addField(":arrow_right: Personnel l'ayant exécutée :", message.author.username)
 
         message.channel.sendMessage(ban_embed)
-	message.client.channels.get("518815172890984456").send(message.author.username + " à exécuter la commande +ban")
+	message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + " à exécuter la commande +ban")
 
         });
 
@@ -257,7 +257,7 @@ client.on('message', async message => {
         .addField(":arrow_right: Personnel l'ayant exécutée :", message.author.username)
 
         message.channel.sendMessage(clear_embed)
-	message.client.channels.get("518815172890984456").send(message.author.username + " à exécuter la commande +clear")
+	message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + " à exécuter la commande +clear")
 
         });
 
@@ -303,7 +303,7 @@ client.on('message', async message => {
         .addField(":arrow_right: Personnel l'ayant exécutée :", message.author.username)
 
         message.channel.sendMessage(mute_embed)
-	message.client.channels.get("518815172890984456").send(message.author.username + " à exécuter la commande +mute")
+	message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + " à exécuter la commande +mute")
 
         });
 
@@ -927,7 +927,7 @@ if(message.content.startsWith(prefix + "say")){
   message.delete()
 
   message.channel.send(say_embed);
-  message.client.channels.get("518815172890984456").send(message.author.username + " à exécuter la commande +say")
+  message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + " à exécuter la commande +say")
 
 }
 
@@ -968,7 +968,7 @@ switch (args[0].toLowerCase()) {
     .setThumbnail(message.author.avatarURL)
     message.reply("**Regarde dans tes messages privés ! Il y a t'es statistiques !**")
     message.author.send(stats_embed);
-    message.client.channels.get("518815172890984456").send(message.author.username + " à exécuter la commande +stats")
+    message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + " à exécuter la commande +stats")
     break;
     case "global":
     let ovargs = message.content.split(" ").slice(1);
@@ -986,7 +986,7 @@ switch (args[0].toLowerCase()) {
     .setFooter("Oversight Corporation")
     .setTimestamp()
     client.channels.findAll('name', 'oversight-global').map(channel => channel.send(embedglobal))
-    message.client.channels.get("518815172890984456").send(message.author.username + " à exécuter la commande +global")
+    message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + " à exécuter la commande +global")
   }
 
   if(message.content.startsWith(prefix + "report")){ 
@@ -1005,7 +1005,7 @@ switch (args[0].toLowerCase()) {
     message.delete().catch(O_o=>{});
     reportschannel.send(reportEmbed);
     message.reply("**Le report à bien été envoyé au staff !** :white_check_mark:")
-    message.client.channels.get("518815172890984456").send(message.author.username + " à exécuter la commande +report")
+    message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + " à exécuter la commande +report")
   }
   if(message.content.startsWith(prefix + 'cat')) {
 		try {
@@ -1024,7 +1024,7 @@ var args = message.content.substring(prefix.length).split(" ");
 switch (args[0].toLowerCase()) { 
     case "serverlist":
     message.channel.send(client.guilds.map(r => r.name + ` | **${r.memberCount}** membres`))
-    message.client.channels.get("518815172890984456").send(message.author.username + " à exécuter la commande +serverlist")	    
+    message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + " à exécuter la commande +serverlist")	    
     break;
 
 }
