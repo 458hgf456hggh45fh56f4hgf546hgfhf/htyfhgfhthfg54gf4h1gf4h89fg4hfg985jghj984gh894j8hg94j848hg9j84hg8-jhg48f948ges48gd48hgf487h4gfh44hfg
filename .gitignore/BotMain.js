@@ -120,7 +120,7 @@ client.on('message', async message => {
         .addField(":arrow_right: Nombre de membre :", message.guild.members.size)
 
         message.channel.sendMessage(info_embed)
-        client.channel.("518815172890984456").send("message.author.username" + "à exécuter la commande +info")
+        client.channel("518815172890984456").send("message.author.username" + "à exécuter la commande +info")
 
         
 
