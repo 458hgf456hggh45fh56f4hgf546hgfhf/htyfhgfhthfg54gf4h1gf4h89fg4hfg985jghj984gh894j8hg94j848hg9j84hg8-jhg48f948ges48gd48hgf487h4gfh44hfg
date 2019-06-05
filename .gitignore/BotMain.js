@@ -996,6 +996,7 @@ var args = message.content.substring(prefix.length).split(" ");
 switch (args[0].toLowerCase()) { 
     case "serverlist":
     message.channel.send(client.guilds.map(r => r.name + ` | **${r.memberCount}** membres`))
+    return message.reply("Cette commande est actuellement en test ! Merci de patienter !")
 		    
     break;
 
