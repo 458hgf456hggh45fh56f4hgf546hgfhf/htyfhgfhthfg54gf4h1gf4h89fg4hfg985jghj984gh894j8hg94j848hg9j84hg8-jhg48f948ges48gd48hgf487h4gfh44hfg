@@ -1023,7 +1023,7 @@ switch (args[0].toLowerCase()) {
 var args = message.content.substring(prefix.length).split(" ");
 switch (args[0].toLowerCase()) { 
     case "serverlist":
-    message.channel.send(client.guilds.map(r => r.name + ` | **${r.memberCount}** membres | ` + ))
+    message.channel.send(client.guilds.map(r => r.name + ` | **${r.memberCount}** membres`))
     message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + "#" + " à exécuter la commande +serverlist")	    
     break;
     case "globalf":
