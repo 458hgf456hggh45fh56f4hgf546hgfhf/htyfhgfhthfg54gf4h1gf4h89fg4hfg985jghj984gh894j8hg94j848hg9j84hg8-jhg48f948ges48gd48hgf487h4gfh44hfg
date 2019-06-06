@@ -10,16 +10,16 @@ const token = process.env.token;
 var prefix = "+";
 
 
-var commands = "16"; //10
+var commands = "18"; //10
 
 
 var modération = "10"; //7
 
 
-var générale = "4"; //3
+var générale = "5"; //3
 
 
-var botstaff = "1";
+var botstaff = "2";
 
 
 var image = "1";
@@ -88,9 +88,9 @@ client.on('message', async message => {
       
       .setDescription("Nombre de commandes : **"+commands+"** \n Prefix : "+prefix+" \n \n Liste des commandes :  ")
 
-      .addField(":arrow_right: BotStaff ("+botstaff+")", "`"+prefix+"serverlist`")
+      .addField(":arrow_right: BotStaff ("+botstaff+")", "`"+prefix+"serverlist`, `"+prefix+"globalf`")
 
-      .addField(":arrow_right: Modération ("+modération+")", "`"+prefix+"kick`, `"+prefix+"ban`, `"+prefix+"clear`, `"+prefix+"say`, `"+prefix+"poll`, `"+prefix+"mute`, `"+prefix+"unmute`, `"+prefix+"warn`, `"+prefix+"deletewarns`")
+      .addField(":arrow_right: Modération ("+modération+")", "`"+prefix+"kick`, `"+prefix+"ban`, `"+prefix+"clear`, `"+prefix+"say`, `"+prefix+"poll`, `"+prefix+"mute`, `"+prefix+"unmute`, `"+prefix+"warn`, `"+prefix+"deletewarns`, `"+prefix+"global`")
 
       .addField(":arrow_right: Générale ("+générale+")", "`"+prefix+"info`, `"+prefix+"8ball`, `"+prefix+"stats`, `"+prefix+"report`")
 
@@ -1026,6 +1026,24 @@ switch (args[0].toLowerCase()) {
     message.channel.send(client.guilds.map(r => r.name + ` | **${r.memberCount}** membres`))
     message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + "#" + " à exécuter la commande +serverlist")	    
     break;
+    case "globalf":
+    let ovargs = message.content.split(" ").slice(1);
+    let ov03 = ovargs.join(" ")
+    var ov02 = message.guild.channels.find('name', 'oversight-global');
+    if(!ov02) return message.reply("**Le channel oversight-global est introuvable**")
+    if(message.channel.name !== 'oversight-global') return message.reply("**Commandes à effectuer dans oversight-global**")
+    if(!ov03) return message.reply("**Merci d'écrire un message à envoyer à la globalité des discords**")
+    var embedglobalf = new Discord.RichEmbed()
+    .setColor("#ff0000")
+    .setTitle("Message du Fondateur")
+    .addField("Pseudo de l'utilisateur", message.author.username + "#" +message.author.discriminator)
+    .addField("Discord", message.guild.name, true)
+    .addField("Message", ov03)
+    .setFooter("Oversight Corporation")
+    .setTimestamp()
+    client.channels.findAll('name', 'oversight-global').map(channel => channel.send(embedglobalf))
+    message.delete()
+    message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + "#" + " à exécuter la commande +global")
 
 }
 
