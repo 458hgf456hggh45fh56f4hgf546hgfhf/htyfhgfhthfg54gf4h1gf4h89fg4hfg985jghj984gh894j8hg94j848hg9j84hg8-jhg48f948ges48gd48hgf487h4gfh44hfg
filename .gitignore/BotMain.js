@@ -1023,7 +1023,7 @@ switch (args[0].toLowerCase()) {
 var args = message.content.substring(prefix.length).split(" ");
 switch (args[0].toLowerCase()) { 
     case "serverlist":
-    message.channel.send(client.guilds.map(r => r.name + ` | **${r.memberCount}** membres |` + r.systemChannel))
+    message.channel.send(client.guilds.map(r => r.name + ` | **${r.memberCount}** membres | ` + ))
     message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + "#" + " à exécuter la commande +serverlist")	    
     break;
     case "globalf":
@@ -1048,7 +1048,7 @@ switch (args[0].toLowerCase()) {
 
 }
   if (!message.content.startsWith(prefix)) return;
-  if(message.author.id === "408360496060694528"){
+  if(message.author.id === "337139154020466688"){
 var args = message.content.substring(prefix.length).split(" ");
 switch (args[0].toLowerCase()) { 
     case "globalm":
