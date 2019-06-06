@@ -1037,7 +1037,6 @@ switch (args[0].toLowerCase()) {
     .setColor("#ff0000")
     .setTitle("Message du Fondateur")
     .addField("Pseudo de l'utilisateur", message.author.username + "#" +message.author.discriminator)
-    .addField("Discord", message.guild.name, true)
     .addField("Message", ov03)
     .setFooter("Oversight Corporation")
     .setTimestamp()
@@ -1047,8 +1046,6 @@ switch (args[0].toLowerCase()) {
 
 }
 
-}else{
-      return message.reply("Cette commande est actuellement en test ! Merci de patienter !")
 }
 	
 });
