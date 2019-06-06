@@ -90,9 +90,9 @@ client.on('message', async message => {
 
       .addField(":arrow_right: BotStaff ("+botstaff+")", "`"+prefix+"serverlist`, `"+prefix+"globalf`")
 
-      .addField(":arrow_right: Modération ("+modération+")", "`"+prefix+"kick`, `"+prefix+"ban`, `"+prefix+"clear`, `"+prefix+"say`, `"+prefix+"poll`, `"+prefix+"mute`, `"+prefix+"unmute`, `"+prefix+"warn`, `"+prefix+"deletewarns`, `"+prefix+"global`")
+      .addField(":arrow_right: Modération ("+modération+")", "`"+prefix+"kick`, `"+prefix+"ban`, `"+prefix+"clear`, `"+prefix+"say`, `"+prefix+"poll`, `"+prefix+"mute`, `"+prefix+"unmute`, `"+prefix+"warn`, `"+prefix+"deletewarns`")
 
-      .addField(":arrow_right: Générale ("+générale+")", "`"+prefix+"info`, `"+prefix+"8ball`, `"+prefix+"stats`, `"+prefix+"report`")
+      .addField(":arrow_right: Générale ("+générale+")", "`"+prefix+"info`, `"+prefix+"8ball`, `"+prefix+"stats`, `"+prefix+"report`, `"+prefix+"global`")
 
       .addField(":arrow_right: Image ("+image+")", "`"+prefix+"cat`")
 
