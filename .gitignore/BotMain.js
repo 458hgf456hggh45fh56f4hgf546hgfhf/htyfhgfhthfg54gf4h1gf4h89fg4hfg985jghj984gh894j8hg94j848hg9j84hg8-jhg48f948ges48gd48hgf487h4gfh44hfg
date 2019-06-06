@@ -10,7 +10,7 @@ const token = process.env.token;
 var prefix = "+";
 
 
-var commands = "18"; //10
+var commands = "19"; //10
 
 
 var modération = "10"; //7
@@ -19,7 +19,7 @@ var modération = "10"; //7
 var générale = "5"; //3
 
 
-var botstaff = "2";
+var botstaff = "3";
 
 
 var image = "1";
@@ -88,7 +88,7 @@ client.on('message', async message => {
       
       .setDescription("Nombre de commandes : **"+commands+"** \n Prefix : "+prefix+" \n \n Liste des commandes :  ")
 
-      .addField(":arrow_right: BotStaff ("+botstaff+")", "`"+prefix+"serverlist`, `"+prefix+"globalf`")
+      .addField(":arrow_right: BotStaff ("+botstaff+")", "`"+prefix+"serverlist`, `"+prefix+"globalf`, `"+prefix+"globalm`")
 
       .addField(":arrow_right: Modération ("+modération+")", "`"+prefix+"kick`, `"+prefix+"ban`, `"+prefix+"clear`, `"+prefix+"say`, `"+prefix+"poll`, `"+prefix+"mute`, `"+prefix+"unmute`, `"+prefix+"warn`, `"+prefix+"deletewarns`")
 
@@ -1023,7 +1023,7 @@ switch (args[0].toLowerCase()) {
 var args = message.content.substring(prefix.length).split(" ");
 switch (args[0].toLowerCase()) { 
     case "serverlist":
-    message.channel.send(client.guilds.map(r => r.name + ` | **${r.memberCount}** membres`))
+    message.channel.send(client.guilds.map(r => r.name + ` | **${r.memberCount}** membres |` + r.owner.username))
     message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + "#" + " à exécuter la commande +serverlist")	    
     break;
     case "globalf":
