@@ -926,7 +926,7 @@ if(message.content.startsWith(prefix + "say")){
   message.delete()
 
   message.channel.send(say_embed);
-  message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + "#" + "à exécuter la commande +say")
+  message.client.channels.get("518815172890984456").send(message.author.username + "#" + message.author.discriminator + "à exécuter la commande +say")
 
 }
 
@@ -985,6 +985,7 @@ switch (args[0].toLowerCase()) {
     .setFooter("Oversight Corporation")
     .setTimestamp()
     client.channels.findAll('name', 'oversight-global').map(channel => channel.send(embedglobal))
+    message.delete()
     message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + "#" + " à exécuter la commande +global")
   }
 
