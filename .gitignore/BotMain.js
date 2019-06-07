@@ -339,7 +339,7 @@ client.on('message', async message => {
         message.channel.overwritePermissions(mute, { SEND_MESSAGES: true}).then(member => {
 
             message.channel.send(`${mute.user.username} n'est plus mute !`);
-	    message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + "#" + " à exécuter la commande +unmute")
+	    message.client.channels.get("518815172890984456").send(message.author.username + "#" + message.author.discriminator + " à exécuter la commande +unmute")
 
         });
 
@@ -967,7 +967,7 @@ switch (args[0].toLowerCase()) {
     .setThumbnail(message.author.avatarURL)
     message.reply("**Regarde dans tes messages privés ! Il y a t'es statistiques !**")
     message.author.send(stats_embed);
-    message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + "#" + " à exécuter la commande +stats")
+    message.client.channels.get("518815172890984456").send(message.author.username + "#" + message.author.discriminator + " à exécuter la commande +stats")
     break;
     case "global":
     let ovargs = message.content.split(" ").slice(1);
@@ -986,7 +986,7 @@ switch (args[0].toLowerCase()) {
     .setTimestamp()
     client.channels.findAll('name', 'oversight-global').map(channel => channel.send(embedglobal))
     message.delete()
-    message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + "#" + " à exécuter la commande +global")
+    message.client.channels.get("518815172890984456").send(message.author.username + "#" + message.author.discriminator + " à exécuter la commande +global")
   }
 
   if(message.content.startsWith(prefix + "report")){ 
@@ -1005,7 +1005,7 @@ switch (args[0].toLowerCase()) {
     message.delete().catch(O_o=>{});
     reportschannel.send(reportEmbed);
     message.reply("**Le report à bien été envoyé au staff !** :white_check_mark:")
-    message.client.channels.get("518815172890984456").send(message.author.username + message.author.discriminator + "#" + " à exécuter la commande +report")
+    message.client.channels.get("518815172890984456").send(message.author.username + "#" + message.author.discriminator + " à exécuter la commande +report")
   }
   if(message.content.startsWith(prefix + 'cat')) {
 		try {
