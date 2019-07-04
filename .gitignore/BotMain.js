@@ -994,6 +994,7 @@ switch (args[0].toLowerCase()) {
     if(!rUser) return message.channel.send("**Mentionner un utilisateur**");
     let rreason = args.join(" ").slice(22);
     let reportEmbed = new Discord.RichEmbed()
+    .setColor("#ff3108")
     .setDescription("Report")
     .addField("La Personne Report", `${rUser} ID: ${rUser.id}`)
     .addField("Report par", `${message.author} ID: ${message.author.id}`)
@@ -1013,6 +1014,7 @@ switch (args[0].toLowerCase()) {
     if(!rUser) return message.channel.send("**Mentionner votre pseudo**");
     let rreason = args.join(" ").slice(22);
     let reportEmbed = new Discord.RichEmbed()
+    .setColor("#95ff00")
     .setDescription("Recrutement compte Certifié")
     .addField("Personnes ayant postuler", `${message.author} ID: ${message.author.id}`)
     .addField("Date", message.createdAt)
