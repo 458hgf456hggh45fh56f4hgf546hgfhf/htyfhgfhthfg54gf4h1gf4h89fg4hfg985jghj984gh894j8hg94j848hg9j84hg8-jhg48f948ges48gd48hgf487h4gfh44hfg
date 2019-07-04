@@ -1007,6 +1007,24 @@ switch (args[0].toLowerCase()) {
     message.reply("**Le report à bien été envoyé au staff !** :white_check_mark:")
     message.client.channels.get("518815172890984456").send(message.author.username + "#" + message.author.discriminator + " à exécuter la commande +report")
   }
+	
+  if(message.content.startsWith(prefix + "postuler")){ 
+    let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+    if(!rUser) return message.channel.send("**Mentionner votre pseudo**");
+    let rreason = args.join(" ").slice(22);
+    let reportEmbed = new Discord.RichEmbed()
+    .setDescription("Recrutement compte Certifié")
+    .addField("Report par", `${message.author} ID: ${message.author.id}`)
+    .addField("Salon", message.channel)
+    .addField("Date", message.createdAt)
+    .addField("Liens", rreason);
+    let reportschannel = message.guild.channels.find(`name`, "report");
+    if(!reportschannel) return message.channel.send("**Le salon 'report' n'existe pas !**");
+    message.delete().catch(O_o=>{});
+    reportschannel.send(reportEmbed);
+    message.reply("**Vous avez bien postuler !** :white_check_mark:")
+    message.client.channels.get("518815172890984456").send(message.author.username + "#" + message.author.discriminator + " à exécuter la commande +report")
+  }
   if(message.content.startsWith(prefix + 'cat')) {
 		try {
 			get('https://aws.random.cat/meow').then(res => {
