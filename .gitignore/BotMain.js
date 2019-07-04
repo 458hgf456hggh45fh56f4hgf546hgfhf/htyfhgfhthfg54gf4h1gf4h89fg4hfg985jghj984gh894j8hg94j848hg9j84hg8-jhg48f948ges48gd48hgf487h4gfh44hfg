@@ -1010,7 +1010,7 @@ switch (args[0].toLowerCase()) {
   }
 	
   if(message.content.startsWith(prefix + "postuler")){ 
-    let rreason = args.join(" ").slice(22);
+    let rreason = args.join(" ").slice(1);
     if (rreason) return message.channel.send("**Mettez votre liens")
     let reportEmbed = new Discord.RichEmbed()
     .setColor("#95ff00")
