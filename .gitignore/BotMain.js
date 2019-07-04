@@ -1014,8 +1014,7 @@ switch (args[0].toLowerCase()) {
     let rreason = args.join(" ").slice(22);
     let reportEmbed = new Discord.RichEmbed()
     .setDescription("Recrutement compte Certifié")
-    .addField("Report par", `${message.author} ID: ${message.author.id}`)
-    .addField("Salon", message.channel)
+    .addField("Personnes ayant postuler", `${message.author} ID: ${message.author.id}`)
     .addField("Date", message.createdAt)
     .addField("Liens", rreason);
     let reportschannel = message.guild.channels.find(`name`, "report");
