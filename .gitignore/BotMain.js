@@ -1010,9 +1010,8 @@ switch (args[0].toLowerCase()) {
   }
 	
   if(message.content.startsWith(prefix + "postuler")){ 
-    let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!rUser) return message.channel.send("**Mentionner votre pseudo**");
     let rreason = args.join(" ").slice(22);
+    if (rreason) return message.channel.send("**Mettez votre liens")
     let reportEmbed = new Discord.RichEmbed()
     .setColor("#95ff00")
     .setDescription("Recrutement compte Certifié")
