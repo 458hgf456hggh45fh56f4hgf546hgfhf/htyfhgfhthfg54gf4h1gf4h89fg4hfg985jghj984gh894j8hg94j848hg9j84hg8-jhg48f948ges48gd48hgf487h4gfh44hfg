@@ -1010,23 +1010,6 @@ switch (args[0].toLowerCase()) {
     message.client.channels.get("518815172890984456").send(message.author.username + "#" + message.author.discriminator + " à exécuter la commande +report")
   }
 	
-  if(message.content.startsWith(prefix + "postuler")){ 
-    let rUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-    if(!rUser) return message.channel.send("**Mentionner votre pseudo**");
-    let rreason = args.join(" ").slice(22);
-    let reportEmbed = new Discord.RichEmbed()
-    .setColor("#95ff00")
-    .setDescription("Recrutement compte Certifié")
-    .addField("Personnes ayant postuler", `${message.author} ID: ${message.author.id}`)
-    .addField("Liens", rreason);
-    let reportschannel = message.guild.channels.find(`name`, "「📃」recrutement-certifé");
-    if(!reportschannel) return message.channel.send("**Le salon 'report' n'existe pas !**");
-    message.delete().catch(O_o=>{});
-    reportschannel.send(reportEmbed);
-    message.reply("**Vous avez bien postuler !** :white_check_mark:")
-    message.react("✅")
-    message.client.channels.get("518815172890984456").send(message.author.username + "#" + message.author.discriminator + " à exécuter la commande +report")
-  }
   if(message.content.startsWith(prefix + 'cat')) {
 		try {
 			get('https://aws.random.cat/meow').then(res => {
