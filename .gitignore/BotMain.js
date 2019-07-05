@@ -7,7 +7,7 @@ const client = new Discord.Client();
 
 const token = process.env.token;
 
-var prefix = "-";
+var prefix = "+";
 
 
 var commands = "19"; //10
