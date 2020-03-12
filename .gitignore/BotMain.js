@@ -941,7 +941,7 @@ if(message.content.startsWith(prefix + "poll")){
     .addField(thingToEcho, "Répondre avec :white_check_mark: ou :x:")
 
     message.channel.send("**Votre sondage à bien été lancé dans sondages**")
-    message.guild.channels.find("name", "sondages").sendEmbed(embed)
+    message.guild.channels.find("name", "「📊」sondage").sendEmbed(embed)
     .then(function (message) {
       message.react("✅")
       message.react("❌")
