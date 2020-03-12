@@ -72,7 +72,7 @@ client.on('guildMemberAdd', member => {
 client.on("ready", () => {
 	
     client.user.setGame(`${prefix}help | ${client.guilds.size} Serveur ${client.users.size} Amis`);
-    client.user.setUsername(`CuBzBOT`)
+    client.user.setUsername('CuBzBOT')
     
 
 
